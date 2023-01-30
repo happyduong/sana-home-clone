@@ -128,6 +128,7 @@ var sana = {
             speed: 1200,
             grabCursor: true,
             effect: 'slide',
+            spaceBetween: 30,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

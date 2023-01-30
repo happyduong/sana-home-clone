@@ -82,6 +82,10 @@ footer {
   & .footer-widget-area {
     padding: 35px 0;
 
+    @media (max-width: 767.98px) {
+      text-align: center;
+    }
+
     & .logo {
       display: inline-block;
       margin-bottom: 30px;
@@ -98,6 +102,10 @@ footer {
         font-size: 14px;
         max-width: 80%;
         margin-bottom: 50px;
+
+        @media (max-width: 767.98px) {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -111,6 +119,10 @@ footer {
     padding: 0;
     display: flex;
     align-items: center;
+
+    @media (max-width: 767.98px) {
+      justify-content: center;
+    }
 
     & li {
       width: 30px;
@@ -145,6 +157,10 @@ footer {
     margin-bottom: 36px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 767.98px) {
+      justify-content: center;
+    }
 
     &::after {
       content: "";
@@ -258,11 +274,20 @@ footer {
   visibility: hidden;
   color: var(--black);
 
+  @media (max-width: 767.98px) {
+    width: 52px;
+    height: 52px;
+  }
+
   &::before {
     font-family: "sana-fontello";
     content: "\e809";
     transform: rotate(-90deg);
     font-size: 30px;
+
+    @media (max-width: 767.98px) {
+      font-size: 20px;
+    }
   }
 
   &:hover {
