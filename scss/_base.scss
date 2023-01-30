@@ -1,0 +1,243 @@
+:root {
+  --black: #141414;
+  --black-darker: #000000;
+  --black-text: rgba(20, 20, 20, 1);
+  --black-light: rgba(20, 20, 20, 0.2);
+  --gray: #f9f1ec;
+  --gray-lighter: rgba(249, 241, 236, 0.5);
+  --white: #ffffff;
+  --main: #dfba9f;
+  --main-darker: #c19c81;
+  --main-lighter: rgba(223, 186, 159, 0.5);
+  --red: #ff7366;
+  --font-main: "Ubuntu", sans-serif;
+  --font-headers: "Prata", serif;
+  --font-subheaders: "Mrs Saint Delafield", serif;
+  scroll-behavior: auto;
+}
+
+@font-face {
+  font-family: "sana-fontello";
+  src: url("../assets/fonts/ltx-sana.eot?1.4");
+  src: url("../assets/fonts/ltx-sana.eot?1.4#iefix") format("embedded-opentype"),
+    url("../assets/fonts/ltx-sana.woff2?1.4") format("woff2"),
+    url("../assets/fonts/ltx-sana.woff?1.4") format("woff"),
+    url("../assets/fonts/ltx-sana.ttf?1.4") format("truetype"),
+    url("../assets/fonts/ltx-sana.svg?1.4#ltx-sana") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+table {
+  font-size: 14px;
+  line-height: 1.6em;
+  font-family: var(--font-main), sans-serif;
+
+  &.scroll-locked {
+    overflow-y: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "sana-fontello";
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-magnifying-glass:before {
+  content: "\e800";
+}
+
+.icon-mail:before {
+  content: "\e801";
+}
+
+.icon-organic:before {
+  content: "\e802";
+}
+
+.icon-percentage:before {
+  content: "\e803";
+}
+
+.icon-phone-call:before {
+  content: "\e804";
+}
+
+.icon-placeholder:before {
+  content: "\e805";
+}
+
+.icon-shopping-bag:before {
+  content: "\e806";
+}
+
+.icon-twitter:before {
+  content: "\e807";
+}
+
+.icon-youtube:before {
+  content: "\e808";
+}
+
+.icon-arrow:before {
+  content: "\e809";
+}
+
+.icon-avatar:before {
+  content: "\e80a";
+}
+
+.icon-certificate:before {
+  content: "\e80b";
+}
+
+.icon-cosmetics:before {
+  content: "\e80c";
+}
+
+.icon-delivery:before {
+  content: "\e80d";
+}
+
+.icon-facebook:before {
+  content: "\e80e";
+}
+
+.icon-heart:before {
+  content: "\e80f";
+}
+
+.icon-information:before {
+  content: "\e810";
+}
+
+.icon-instagram:before {
+  content: "\e811";
+}
+
+.icon-linkedin:before {
+  content: "\e812";
+}
+
+.icon-settings:before {
+  content: "\e813";
+}
+
+.icon-shopping-bag-1:before {
+  content: "\e814";
+}
+
+.icon-chat:before {
+  content: "\e815";
+}
+
+.icon-favorites:before {
+  content: "\e816";
+}
+
+.icon-layers:before {
+  content: "\e817";
+}
+
+.icon-responsive:before {
+  content: "\e818";
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1570px;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  line-height: 17px;
+  position: relative;
+  background-color: var(--white) !important;
+  transition: all 0.3s ease 0s;
+  padding: 10px 30px;
+  color: var(--black) !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 500;
+  border: 0;
+  border-radius: 0;
+
+  &::before {
+    content: "";
+    background-color: var(--black);
+    width: 20px;
+    height: 0.67px;
+    display: inline-block;
+    margin-right: 8px;
+    transition: all 0.3s ease 0s;
+  }
+
+  &.btn-lg {
+    height: 60px;
+    font-size: 14px;
+    padding: 10px 40px;
+
+    &::before {
+      width: 40px;
+    }
+  }
+
+  &.btn-primary {
+    box-shadow: inset 0 0px 0 50px var(--main) !important;
+
+    &:hover {
+      box-shadow: inset 0 0px 0 0 var(--main) !important;
+    }
+  }
+
+  &.btn-secondary {
+    box-shadow: inset 0 0px 0 50px var(--black) !important;
+    color: var(--white) !important;
+    background-color: var(--main) !important;
+
+    &::before {
+      background-color: var(--white);
+    }
+
+    &:hover {
+      box-shadow: inset 0 0px 0 0 var(--main) !important;
+    }
+  }
+}

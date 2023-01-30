@@ -1,0 +1,17 @@
+@import "_base";
+@import "_navbar";
+@import "_heroSlider";
+@import "_homeCollection";
+@import "_homeServices";
+@import "_homeCustomContent";
+@import "_chooseOurServices";
+@import "_testimonials";
+@import "_homePartners";
+@import "_ourPortfolio";
+@import "_footer";
+
+main.main-wrapper {
+  @media (max-width: 991.98px) {
+    margin-bottom: 0 !important;
+  }
+}

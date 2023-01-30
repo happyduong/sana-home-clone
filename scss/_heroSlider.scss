@@ -1,0 +1,223 @@
+/* Hero Slider */
+#hero-slider.swiper-container {
+  width: 100%;
+  height: 100vh;
+  height: 1000px;
+  background-color: #000;
+  margin-top: -100px;
+
+  @media (max-width: 767.98px) {
+    height: 600px;
+  }
+
+  & .swiper-pagination-bullets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
+    left: auto;
+    width: auto;
+
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      font-size: 18px;
+      font-family: var(--font-main);
+      opacity: 1;
+      margin: 20px 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        border-top: 1px solid #dfba9f;
+        border-color: #dfba9f;
+        border-color: var(--main);
+        position: absolute;
+        width: 0;
+        right: 0;
+        top: 50%;
+        transition: width 0.5s;
+      }
+
+      &:hover,
+      &-active {
+        color: var(--main);
+
+        &::before {
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+
+  /* Swiper slides */
+  .swiper-slide {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .swiper-tagline {
+      position: absolute;
+      top: 50%;
+      left: 70px;
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      transform: rotate(270deg) translateX(-50%);
+      transform-origin: 0 0;
+      opacity: 0.7;
+      z-index: 2;
+
+      @media (max-width: 1199.98px) {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: baseline;
+        margin-right: 13px;
+        width: 100px;
+        height: 1px;
+        background-color: var(--main);
+      }
+    }
+
+    .swiper-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--white);
+      text-align: center;
+      width: 100%;
+      max-width: 1060px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      transition: all 0.3s ease-in-out 0s;
+
+      @media (max-width: 1199.98px) {
+        top: 40%;
+        transform: translate(-50%, -40%);
+      }
+
+      @media (max-width: 991.98px) {
+        max-width: 80%;
+      }
+
+      @media (max-width: 767.98px) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .swiper-subtitle {
+        animation-delay: 100ms;
+        font-family: var(--font-subheaders);
+        line-height: 70px;
+        font-weight: 400;
+        font-size: 80px;
+        color: rgb(223, 186, 159);
+        letter-spacing: 0;
+
+        @media (max-width: 767.98px) {
+          line-height: 45px;
+          font-size: 45px;
+        }
+      }
+
+      .swiper-title {
+        font-family: var(--font-headers);
+        animation-delay: 400ms;
+        line-height: 111px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-size: 80px;
+        letter-spacing: 0;
+        margin-bottom: 30px;
+
+        @media (max-width: 991.98px) {
+          line-height: 80px;
+        }
+
+        @media (max-width: 767.98px) {
+          line-height: 45px;
+          font-size: 45px;
+        }
+      }
+
+      .swiper-desc {
+        animation-delay: 700ms;
+        font-family: var(--font-main);
+        line-height: 26px;
+        font-weight: 400;
+        font-size: 18px;
+        max-width: 770px;
+        letter-spacing: 0;
+        margin-bottom: 70px;
+      }
+
+      .swiper-action {
+        animation-delay: 1000ms;
+
+        & a {
+          @media (max-width: 767.98px) {
+            height: 50px;
+            font-size: 12px;
+            padding: 10px 30px;
+          }
+        }
+      }
+    }
+
+    &.swiper-slide-active {
+      & .swiper-subtitle {
+        animation-name: zoomIn;
+      }
+
+      & .swiper-title {
+        animation-name: zoomIn;
+      }
+
+      & .swiper-desc {
+        animation-name: zoomIn;
+      }
+
+      & .swiper-action {
+        animation-name: fadeIn;
+      }
+    }
+  }
+}
