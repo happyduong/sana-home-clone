@@ -16,6 +16,8 @@
   & .navbar-logo {
     & a {
       display: flex;
+      position: relative;
+      z-index: 1;
 
       & img {
         max-width: 100px;

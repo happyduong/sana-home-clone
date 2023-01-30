@@ -265,6 +265,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 .navbar .navbar-logo a img {
   max-width: 100px;
