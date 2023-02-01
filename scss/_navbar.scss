@@ -1,4 +1,19 @@
 /* Navbar */
+// @media (min-width: 1200px) {
+  header.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: all 0.3s ease-in-out 0s;
+
+    &.is-sticky {
+      background-color: var(--black);
+    }
+  }
+// }
+
 .navbar {
   height: 100px;
   position: relative;

@@ -8,6 +8,7 @@ var sana = {
         this.initNavbarResponsive();
         this.initNavbarSearch();
         this.initHeroSlider();
+        this.initCollectionProducts();
         this.initServicesParallaxBg();
         this.initTestimonialSwiper();
         this.initOurPortfolio();
@@ -29,24 +30,28 @@ var sana = {
 
         checkNavbar();
 
-        $('.navbar-hamburger').click(function() {
+        $('.navbar-hamburger').click(function () {
             $(this).toggleClass('is-opened');
             $('.navbar-mobile').toggleClass('is-opened');
             $('body').toggleClass('scroll-locked');
         });
 
-        $('.navbar-mobile-close').click(function() {
+        $('.navbar-mobile-close').click(function () {
             $('.navbar-hamburger').removeClass('is-opened');
-            $('.navbar-mobile').removeClass('is-opened');            
+            $('.navbar-mobile').removeClass('is-opened');
             $('body').removeClass('scroll-locked');
         });
 
-        $('.toggle-menu').click(function() {
+        $('.toggle-menu').click(function () {
             $(this).parent('li').toggleClass('is-expanded');
         });
 
         $(window).resize(function () {
             checkNavbar();
+        });
+
+        $(window).scroll(function () {
+            ($(this).scrollTop() > 200) ? $('header.header-wrapper').addClass('is-sticky') : $('header.header-wrapper').removeClass('is-sticky');
         });
     },
     initNavbarSearch: function () {
@@ -86,6 +91,35 @@ var sana = {
                 renderBullet: function (index, className) {
                     return '<span class="' + className + '">' + (index < 9 && '0') + (index + 1) + "</span>";
                 },
+            }
+        });
+    },
+    initCollectionProducts: function () {
+        var collectionProducts = new Swiper(".collection-products", {
+            // Optional parameters
+            speed: 1000,
+            grabCursor: true,
+            spaceBetween: 60,
+            slidesPerView: 3,
+            navigation: {
+                nextEl: ".collection-products-wrapper .swiper-button-next",
+                prevEl: ".collection-products-wrapper .swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 60
+                },
+                // when window width is >= 480px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 60
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 60
+                }
             }
         });
     },
@@ -130,8 +164,8 @@ var sana = {
             effect: 'slide',
             spaceBetween: 30,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: "#testimonials-swiper .swiper-button-next",
+                prevEl: "#testimonials-swiper .swiper-button-prev",
             },
         });
     },
@@ -162,11 +196,23 @@ var sana = {
             //duration of the top scrolling animation (in ms)
             scroll_top_duration = 1200,
             //grab the "back to top" link
-            $back_to_top = $('#back-to-top');
+            $back_to_top = $('#back-to-top'),
+
+            $booking_now = $('#booking-now'),
+
+            $call_now = $('#call-now');
 
         //hide or show the "back to top" link
         $(window).scroll(function () {
-            ($(this).scrollTop() > offset) ? $back_to_top.addClass('is-visible') : $back_to_top.removeClass('is-visible');
+            if ($(this).scrollTop() > offset) {
+                $back_to_top.addClass('is-visible');
+                $booking_now.addClass('is-visible');
+                $call_now.addClass('is-visible');
+            } else {
+                $back_to_top.removeClass('is-visible');
+                $booking_now.removeClass('is-visible');
+                $call_now.removeClass('is-visible');
+            }
         });
         //smooth scroll to top
         $back_to_top.on('click', function (event) {

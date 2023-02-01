@@ -37,7 +37,9 @@ table {
   font-family: var(--font-main), sans-serif;
 
   &.scroll-locked {
-    overflow-y: hidden;
+    @media (max-width: 1199.98px) {
+      overflow-y: hidden;
+    }
   }
 }
 

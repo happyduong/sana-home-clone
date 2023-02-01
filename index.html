@@ -169,9 +169,6 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide slide-1" style="background-image: url(assets/images/SLIDE_01.jpg)">
-                        <div class="swiper-tagline">
-                            <span>Your personal fashion stylist</span>
-                        </div>
                         <div class="swiper-content">
                             <div class="swiper-subtitle animate__animated">Be Fashion</div>
                             <div class="swiper-title animate__animated">
@@ -188,9 +185,6 @@
                         </div>
                     </div>
                     <div class="swiper-slide slide-2" style="background-image: url(assets/images/SLIDE_02.jpg)">
-                        <div class="swiper-tagline">
-                            <span>Your personal fashion stylist</span>
-                        </div>
                         <div class="swiper-content">
                             <div class="swiper-subtitle animate__animated">Be Fashion</div>
                             <div class="swiper-title animate__animated">
@@ -207,9 +201,6 @@
                         </div>
                     </div>
                     <div class="swiper-slide slide-3" style="background-image: url(assets/images/SLIDE_03.jpg)">
-                        <div class="swiper-tagline">
-                            <span>Your personal fashion stylist</span>
-                        </div>
                         <div class="swiper-content">
                             <div class="swiper-subtitle animate__animated">Be Fashion</div>
                             <div class="swiper-title animate__animated">
@@ -230,6 +221,31 @@
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
+                <div class="social-icons">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-linkedin"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </section>
 
             <section class="home-collection">
@@ -245,51 +261,69 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-12 col-xl-9">
-                            <div class="collection-products row">
-                                <div class="col-lg-4 col-md-6 col-sm-12 wow animate__animated animate__fadeIn"
-                                    data-wow-delay="200ms">
-                                    <a href="#">
-                                        <span class="image">
-                                            <span class="img-border-top"></span>
-                                            <span class="img-border-bottom"></span>
-                                            <img src="assets/images/COL_01-280x355.jpg" alt="Autumn - Winter ‘’23">
-                                        </span>
-                                        <h4>
-                                            Autumn - Winter
-                                            <span>‘’23</span>
-                                        </h4>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 wow animate__animated animate__fadeIn"
-                                    data-wow-delay="300ms">
-                                    <a href="#">
-                                        <span class="image">
-                                            <span class="img-border-top"></span>
-                                            <span class="img-border-bottom"></span>
-                                            <img src="assets/images/COL_02-280x355.jpg" alt="Spring - Summer ‘’23">
-                                        </span>
-                                        <h4>
-                                            Spring - Summer
-                                            <span>‘’23</span>
-                                        </h4>
-                                    </a>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 wow animate__animated animate__fadeIn"
-                                    data-wow-delay="400ms">
-                                    <a href="#">
-                                        <span class="image">
-                                            <span class="img-border-top"></span>
-                                            <span class="img-border-bottom"></span>
-                                            <img src="assets/images/COL_03-280x355.jpg" alt="Male Collection ‘’23">
-                                        </span>
-                                        <h4>
-                                            Male Collection
-                                            <span>‘’23</span>
-                                        </h4>
-                                    </a>
+                        <div class="col-sm-12 col-lg-12 col-xl-9 collection-products-wrapper">
+                            <div class="collection-products swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide wow animate__animated animate__fadeIn"
+                                        data-wow-delay="200ms">
+                                        <a href="#">
+                                            <span class="image">
+                                                <span class="img-border-top"></span>
+                                                <span class="img-border-bottom"></span>
+                                                <img src="assets/images/COL_01-280x355.jpg" alt="Autumn - Winter ‘’23">
+                                            </span>
+                                            <h4>
+                                                Autumn - Winter
+                                                <span>‘’23</span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide wow animate__animated animate__fadeIn"
+                                        data-wow-delay="300ms">
+                                        <a href="#">
+                                            <span class="image">
+                                                <span class="img-border-top"></span>
+                                                <span class="img-border-bottom"></span>
+                                                <img src="assets/images/COL_02-280x355.jpg" alt="Spring - Summer ‘’23">
+                                            </span>
+                                            <h4>
+                                                Spring - Summer
+                                                <span>‘’23</span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide wow animate__animated animate__fadeIn"
+                                        data-wow-delay="400ms">
+                                        <a href="#">
+                                            <span class="image">
+                                                <span class="img-border-top"></span>
+                                                <span class="img-border-bottom"></span>
+                                                <img src="assets/images/COL_03-280x355.jpg" alt="Male Collection ‘’23">
+                                            </span>
+                                            <h4>
+                                                Male Collection
+                                                <span>‘’23</span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide wow animate__animated animate__fadeIn"
+                                        data-wow-delay="500ms">
+                                        <a href="#">
+                                            <span class="image">
+                                                <span class="img-border-top"></span>
+                                                <span class="img-border-bottom"></span>
+                                                <img src="assets/images/COL_03-280x355.jpg" alt="Male Collection ‘’23">
+                                            </span>
+                                            <h4>
+                                                Male Collection
+                                                <span>‘’23</span>
+                                            </h4>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                            <div class="swiper-button swiper-button-next"></div>
                         </div>
                     </div>
                 </div>
@@ -380,12 +414,9 @@
                                                     <p>Maecenas augue nibh, congue ut ante id, tempus vestibulum sem.
                                                     </p>
                                                 </div>
-                                                <div class="price">
-                                                    <span>$89</span>
-                                                </div>
                                             </div>
-                                            <div class="service-action">
-                                                <a href="#" class="btn btn-secondary">Read More</a>
+                                            <div class="service-price">
+                                                <span>$89</span>
                                             </div>
                                         </li>
                                         <li class="service-price-item">
@@ -397,12 +428,9 @@
                                                     <p>Maecenas augue nibh, congue ut ante id, tempus vestibulum sem.
                                                     </p>
                                                 </div>
-                                                <div class="price">
-                                                    <span>$89</span>
-                                                </div>
                                             </div>
-                                            <div class="service-action">
-                                                <a href="#" class="btn btn-secondary">Read More</a>
+                                            <div class="service-price">
+                                                <span>$89</span>
                                             </div>
                                         </li>
                                         <li class="service-price-item">
@@ -414,12 +442,9 @@
                                                     <p>Maecenas augue nibh, congue ut ante id, tempus vestibulum sem.
                                                     </p>
                                                 </div>
-                                                <div class="price">
-                                                    <span>$89</span>
-                                                </div>
                                             </div>
-                                            <div class="service-action">
-                                                <a href="#" class="btn btn-secondary">Read More</a>
+                                            <div class="service-price">
+                                                <span>$89</span>
                                             </div>
                                         </li>
                                         <li class="service-price-item">
@@ -431,12 +456,9 @@
                                                     <p>Maecenas augue nibh, congue ut ante id, tempus vestibulum sem.
                                                     </p>
                                                 </div>
-                                                <div class="price">
-                                                    <span>$89</span>
-                                                </div>
                                             </div>
-                                            <div class="service-action">
-                                                <a href="#" class="btn btn-secondary">Read More</a>
+                                            <div class="service-price">
+                                                <span>$89</span>
                                             </div>
                                         </li>
                                         <li class="service-price-item">
@@ -448,12 +470,9 @@
                                                     <p>Maecenas augue nibh, congue ut ante id, tempus vestibulum sem.
                                                     </p>
                                                 </div>
-                                                <div class="price">
-                                                    <span>$89</span>
-                                                </div>
                                             </div>
-                                            <div class="service-action">
-                                                <a href="#" class="btn btn-secondary">Read More</a>
+                                            <div class="service-price">
+                                                <span>$89</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -813,7 +832,15 @@
             </section>
         </footer>
 
-        <a href="javascript:void(0)" class="back-to-top" id="back-to-top"></a>
+        <a href="#" class="booking-now" id="booking-now" title="Booking">
+            <i class="fa fa-calendar"></i>
+        </a>
+
+        <a href="#" class="call-now" id="call-now" title="Call">
+            <i class="fa fa-phone"></i>
+        </a>
+
+        <a href="javascript:void(0)" class="back-to-top" id="back-to-top" title="Scroll To Top"></a>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>

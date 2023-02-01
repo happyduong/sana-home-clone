@@ -4,7 +4,6 @@
   height: 100vh;
   height: 1000px;
   background-color: #000;
-  margin-top: -100px;
 
   @media (max-width: 767.98px) {
     height: 600px;
@@ -12,18 +11,16 @@
 
   & .swiper-pagination-bullets {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 70px;
-    left: auto;
-    width: auto;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    @media (max-width: 1199.98px) {
-      display: none;
+    @media (max-width: 991.98px) {
+      bottom: 40px;
+      // display: none;
     }
 
     & .swiper-pagination-bullet {
@@ -38,7 +35,7 @@
       font-size: 18px;
       font-family: var(--font-main);
       opacity: 1;
-      margin: 20px 0;
+      margin: 0 20px;
       position: relative;
 
       &::before {
@@ -86,32 +83,32 @@
       z-index: 1;
     }
 
-    .swiper-tagline {
-      position: absolute;
-      top: 50%;
-      left: 70px;
-      color: var(--white);
-      display: inline-flex;
-      align-items: center;
-      transform: rotate(270deg) translateX(-50%);
-      transform-origin: 0 0;
-      opacity: 0.7;
-      z-index: 2;
+    // .swiper-tagline {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 70px;
+    //   color: var(--white);
+    //   display: inline-flex;
+    //   align-items: center;
+    //   transform: rotate(270deg) translateX(-50%);
+    //   transform-origin: 0 0;
+    //   opacity: 0.7;
+    //   z-index: 2;
 
-      @media (max-width: 1199.98px) {
-        display: none;
-      }
+    //   @media (max-width: 1199.98px) {
+    //     display: none;
+    //   }
 
-      &::before {
-        content: "";
-        display: inline-block;
-        vertical-align: baseline;
-        margin-right: 13px;
-        width: 100px;
-        height: 1px;
-        background-color: var(--main);
-      }
-    }
+    //   &::before {
+    //     content: "";
+    //     display: inline-block;
+    //     vertical-align: baseline;
+    //     margin-right: 13px;
+    //     width: 100px;
+    //     height: 1px;
+    //     background-color: var(--main);
+    //   }
+    // }
 
     .swiper-content {
       position: absolute;
@@ -217,6 +214,26 @@
 
       & .swiper-action {
         animation-name: fadeIn;
+      }
+    }
+  }
+
+  & .social-icons {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+
+    & ul {
+      flex-direction: column;
+
+      & li {
+        margin: 15px 0;
       }
     }
   }
